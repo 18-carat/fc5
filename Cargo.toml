@@ -1,0 +1,21 @@
+[package]
+name = "fc5"
+version = "0.1.0"
+edition = "2021"
+authors = ["Madeleine Maria Ilyinichna"]
+description = "Curate Fight Club 5 compendiums"
+license = "BSD-3-Clause"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+boml = "0.3.1"
+pico-args = "0.5.0"
+roxmltree = "0.19.0"
+uxmlwriter = "0.1.0"
+
+[profile.release]
+codegen-units = 1
+lto = "thin"
+opt-level = 3
+panic = "abort"
